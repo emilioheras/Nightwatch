@@ -1,0 +1,41 @@
+  {
+   "src_folders" : ["./src/tests"],
+   "output_folder" : "./logs/",
+   "custom_commands_path" : "node_modules/nightwatch-custom-commands-assertions/js/commands",
+   "custom_assertions_path" : "node_modules/nightwatch-custom-commands-assertions/js/assertions",
+
+   "selenium" : {
+     "start_process" : true,
+     "server_path" : "./lib/selenium-server-standalone-2.53.0.jar",
+     "log_path" : "./logs/",
+     "host" : "127.0.0.1",
+     "port" : 4444,
+     "cli_args":{
+       "webdriver.chrome.driver":"./lib/chromedriver.exe"
+        }
+       },
+
+    "test_settings" : {
+      "default" : {
+      "launch_url" : "://localhost",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4444,
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : "./screenshots/"
+        },
+
+      "chrome" : {
+		"desiredCapabilities" : {
+		  "browserName" : "chrome",
+		  "javascriptEnabled" : true,
+		  "acceptSslCerts" : true,
+		  "chromeOptions" : {
+		  	"args" : ["start-fullscreen"]
+		  }
+      	}
+	}
+  }
+}
+}
